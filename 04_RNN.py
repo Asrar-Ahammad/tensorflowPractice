@@ -19,7 +19,7 @@ X_test = X_test.astype('float32') / 255.0
 # Simple Recurent Neural Network
 model = keras.Sequential()
 model.add(keras.Input(shape=(None, 28)))
-model.add(layers.SimpleRNN(256, return_sequences=True, activation='relu'))  # For RNN we use tanh activation
+model.add(layers.SimpleRNN(256, return_sequences=True, activation='relu'))  # For RNN we usually use tanh activation
 model.add(layers.SimpleRNN(256, activation='relu'))
 model.add(layers.Dense(10))
 
